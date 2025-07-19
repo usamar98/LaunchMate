@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { createClient } from '@/lib/supabase'
+import { createClient } from '@/lib/supabase-client'
 import Link from 'next/link'
 import { Rocket, Mail, Phone, MapPin } from 'lucide-react'
 import toast from 'react-hot-toast'

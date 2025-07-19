@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useAuth } from '@/components/AuthProvider'
-import { createClient } from '@/lib/supabase'
+import { createClient } from '@/lib/supabase-client'
 import { useRouter } from 'next/navigation'
 import { Mail, Share2, FileText, Calendar, LogOut, User } from 'lucide-react'
 import GenerationResult from '@/components/GenerationResult'
