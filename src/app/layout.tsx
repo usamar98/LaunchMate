@@ -1,17 +1,14 @@
+
+
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "./globals.css";
-import AuthProvider from "@/components/AuthProvider";
-import { Toaster } from "react-hot-toast";
+// Remove duplicate import since it's already imported at the bottom
+// Remove duplicate Toaster import since it's imported at the bottom
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -26,9 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} antialiased`}>
         <AuthProvider>
           {children}
           <Toaster position="top-right" />
@@ -37,3 +32,9 @@ export default function RootLayout({
     </html>
   );
 }
+
+import { Inter } from "next/font/google";
+import "./globals.css";
+import AuthProvider from "@/components/AuthProvider";
+import { Toaster } from "react-hot-toast";
+
