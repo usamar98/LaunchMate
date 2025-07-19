@@ -1,10 +1,8 @@
-
-
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-// Remove duplicate import since it's already imported at the bottom
-// Remove duplicate Toaster import since it's imported at the bottom
+import AuthProvider from "@/components/AuthProvider";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,9 +30,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-import { Inter } from "next/font/google";
-import "./globals.css";
-import AuthProvider from "@/components/AuthProvider";
-import { Toaster } from "react-hot-toast";
-
